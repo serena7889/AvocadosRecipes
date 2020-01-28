@@ -13,6 +13,10 @@
 		437EC88F23E0949F0077D136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437EC88E23E0949F0077D136 /* Assets.xcassets */; };
 		437EC89223E0949F0077D136 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437EC89123E0949F0077D136 /* Preview Assets.xcassets */; };
 		437EC89523E0949F0077D136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437EC89323E0949F0077D136 /* LaunchScreen.storyboard */; };
+		437EC8A023E09A4D0077D136 /* AvocadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EC89F23E09A4D0077D136 /* AvocadosView.swift */; };
+		437EC8A223E09A690077D136 /* RipeningStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EC8A123E09A690077D136 /* RipeningStagesView.swift */; };
+		437EC8A423E09A860077D136 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EC8A323E09A860077D136 /* AppView.swift */; };
+		437EC8A623E09A900077D136 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EC8A523E09A900077D136 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		437EC89123E0949F0077D136 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		437EC89423E0949F0077D136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		437EC89623E0949F0077D136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		437EC89F23E09A4D0077D136 /* AvocadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosView.swift; sourceTree = "<group>"; };
+		437EC8A123E09A690077D136 /* RipeningStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningStagesView.swift; sourceTree = "<group>"; };
+		437EC8A323E09A860077D136 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		437EC8A523E09A900077D136 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,11 @@
 		437EC88723E0949E0077D136 /* AvocadoRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				437EC89E23E09A330077D136 /* Data */,
+				437EC89D23E09A270077D136 /* Model */,
+				437EC89C23E09A220077D136 /* View */,
 				437EC88823E0949E0077D136 /* AppDelegate.swift */,
 				437EC88A23E0949E0077D136 /* SceneDelegate.swift */,
-				437EC88C23E0949E0077D136 /* ContentView.swift */,
 				437EC88E23E0949F0077D136 /* Assets.xcassets */,
 				437EC89323E0949F0077D136 /* LaunchScreen.storyboard */,
 				437EC89623E0949F0077D136 /* Info.plist */,
@@ -73,6 +83,32 @@
 				437EC89123E0949F0077D136 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		437EC89C23E09A220077D136 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				437EC88C23E0949E0077D136 /* ContentView.swift */,
+				437EC89F23E09A4D0077D136 /* AvocadosView.swift */,
+				437EC8A123E09A690077D136 /* RipeningStagesView.swift */,
+				437EC8A323E09A860077D136 /* AppView.swift */,
+				437EC8A523E09A900077D136 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		437EC89D23E09A270077D136 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		437EC89E23E09A330077D136 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437EC8A623E09A900077D136 /* SettingsView.swift in Sources */,
+				437EC8A023E09A4D0077D136 /* AvocadosView.swift in Sources */,
+				437EC8A223E09A690077D136 /* RipeningStagesView.swift in Sources */,
+				437EC8A423E09A860077D136 /* AppView.swift in Sources */,
 				437EC88923E0949E0077D136 /* AppDelegate.swift in Sources */,
 				437EC88B23E0949E0077D136 /* SceneDelegate.swift in Sources */,
 				437EC88D23E0949E0077D136 /* ContentView.swift in Sources */,
