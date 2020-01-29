@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RecipesView.swift
 //  AvocadoRecipes
 //
 //  Created by Serena Lambert on 28/01/2020.
@@ -8,7 +8,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RecipesView: View {
+    
+    var headers: [Header] = headerData
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
@@ -17,20 +20,25 @@ struct ContentView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 0) {
-                        HeaderView()
+                        ForEach(headers) { header in
+                            HeaderView(header: header)
+                        }
                     }
                 }
                     
+                // MARK: - DISHES
                 
+                Text("Best Avocado Dishes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                BestDishesView()
                 
                 // MARK: - FOOTER
                 
                 VStack(alignment: .center, spacing: 20) {
                     Text("All about avocados")
-                        .font(.system(.title, design: .serif))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("ColorGreenAdaptive"))
-                        .padding(8)
+                        .modifier(TitleModifier())
                     Text("Everything you wanted to know about avocados but were too afraid to ask.")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
@@ -45,8 +53,19 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TitleModifier: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+            .foregroundColor(Color("ColorGreenAdaptive"))
+            .padding(8)
+    }
+    
+}
+
+struct RecipesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RecipesView(headers: headerData)
     }
 }

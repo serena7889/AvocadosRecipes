@@ -16,7 +16,7 @@ struct AppView: View {
                     Image("tabicon-branch")
                     Text("Avocados")
             })
-            ContentView()
+            RecipesView()
                 .tabItem({
                     Image("tabicon-book")
                     Text("Avocados")
@@ -40,5 +40,6 @@ struct AppView: View {
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
         AppView()
+            .environment(\.colorScheme, .dark)
     }
 }

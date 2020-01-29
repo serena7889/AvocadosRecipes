@@ -35,9 +35,8 @@ struct AvocadosImage: View {
             .aspectRatio(contentMode: .fit)
             .frame(width: 240, height: 240, alignment: .center)
             .shadow(color: Color("ColorBlackTransparentDark"), radius: 12, x: 0, y: 8)
-            .scaleEffect(pulsatingAnimation ? 1 : 0.5)
-//            .opacity(pulsatingAnimation ? 1 : 0.4)
-            .animation(Animation.easeInOut(duration: 0.5).repeatForever())
+            .scaleEffect(pulsatingAnimation ? 1 : 0.9)
+            .animation(Animation.easeInOut(duration: 1.0).repeatForever())
     }
     
 }
