@@ -13,6 +13,7 @@ struct RecipeDetailView: View {
     var recipe: Recipe
     
     @State private var pulsate: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -36,7 +37,7 @@ struct RecipeDetailView: View {
                     RecipeRatingView(recipe: recipe)
 
                     // COOKING
-                    RecipeDetailsView(recipe: recipe)
+                    RecipeStatsView(recipe: recipe)
 
                     // INGREDIENTS
                     Text("Ingredients")
@@ -91,17 +92,18 @@ struct RecipeDetailView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        // ACTION
+                        self.presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Image(systemName: "chevron.down.circle.fill")
                             .font(.title)
                             .foregroundColor(.white)
                             .shadow(radius: 4)
                             .opacity(self.pulsate ? 1 : 0.8)
-                            .scaleEffect(self.pulsate ? 1.1 : 0.9)
+                            .scaleEffect(self.pulsate ? 1.1 : 0.9, anchor: .center)
                             .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true))
                     })
                     .padding(.horizontal, 22)
+                        .padding(.vertical, 22)
                 }
                 Spacer()
             }
